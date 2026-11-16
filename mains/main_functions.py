@@ -38,8 +38,8 @@ BENCHMARKS = {
 INITIAL_POINTS = {
 
     "Rosenbrock": [
-        (-2.0, 2.0),
-        # (-1.5, 2.25),
+        # (-2.0, 2.0),
+        (1.75, 3),
         # (-1.0, 1.0),
         # (0.0, 2.0),
         # (2.0, 2.0),
@@ -79,7 +79,7 @@ LEARNING_RATES = {
         "momentum": 2.0,
         "nesterov": 2.0,
         "adam": 2.0,
-        "sign": 2.0,
+        "sign": 3.0,
         "muon": 2.0,
     }
 }
@@ -97,7 +97,10 @@ OPTIMIZERS_NAMES = [
 
 LR_DECAY = {
 
-    "Rosenbrock": None,
+    "Rosenbrock": {
+        "step_size": 500,
+        "gamma": 0.01
+    },
 
     "Griewank": {
         "step_size": 100,
